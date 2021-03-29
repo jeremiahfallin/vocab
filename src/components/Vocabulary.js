@@ -29,7 +29,7 @@ export default function Vocabulary({ state, dispatch }) {
     if (word !== "") {
       getWord(word);
     }
-  }, [word, dispatch]);
+  }, [word, dispatch, state.definitions]);
 
   return (
     <>

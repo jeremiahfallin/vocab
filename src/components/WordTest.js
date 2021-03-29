@@ -54,9 +54,11 @@ export default function WordTest({ state }) {
   const [submitted, setSubmitted] = useState(false);
   const [test, setTest] = useState(createTest(state.definitions));
   const [guess, setGuess] = useState(null);
-  const [correct, setCorrect] = useState(null);
   const submitGuess = () => {
     setSubmitted(true);
+    if (guess === test.word) {
+      console.log("Correct");
+    }
   };
 
   return (
